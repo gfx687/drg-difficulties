@@ -1,5 +1,5 @@
 {
-  "Name": "ND_TS_mining (v1)",
+  "Name": "ND_TS_mining (v2)",
   "Description": "True Solo difficulty based on pH-JPEG's ND. Adjusted for mining missions
 
 Enemy caps adjusted to not require More Enemy Attackers
@@ -16,17 +16,19 @@ Mining specific adjustments:
 - sentinels - don't spawn in encounters
 
 General:
-- 40 nitra resups, 40 starting
+- 60 nitra resups, 60 starting
 - swarmer cap 90 -> 30
 - enemy cap 90 -> 60
 
 Enemies:
 - bulks - normal bulks take x3 damage
-- oppressors - fast ones take x3 damage
+- oppressors - take 200% of damage from melee attacks
 - shredders - removed
 - grabbers - speed 150% -> 120%
 - sentinels - don't spawn in encounters
 - goo / fire bombers - take 33% more damage
+- leech - speed 2.0 -> 1.6 to account for VEA speeding them up
+- stingtails - no more than 2 per spawn
 
 Waves:
 - no super waves
@@ -36,8 +38,8 @@ Waves:
   "MaxActiveCritters": 40,
   "MaxActiveSwarmers": 30,
   "MaxActiveEnemies": 60,
-  "ResupplyCost": 40,
-  "StartingNitra": 40,
+  "ResupplyCost": 60,
+  "StartingNitra": 60,
   "ExtraLargeEnemyDamageResistance": 1,
   "ExtraLargeEnemyDamageResistanceB": 1,
   "ExtraLargeEnemyDamageResistanceC": 1,
@@ -175,7 +177,7 @@ Waves:
   "EnemyDescriptors": {
     "ED_CaveLeech": {
       "Base": "ED_CaveLeech",
-      "TimeDilation": 2,
+      "TimeDilation": 1.6,
       "DifficultyRating": 100
     },
     "ED_Spider_Tank_HeavySpawn": {
@@ -446,7 +448,7 @@ Waves:
       "TimeDilation": 1,
       "PawnStats": {
         "PST_MovementSpeed": 2,
-        "PST_DamageResistance": 3
+        "PST_PhysicalResistance": -1
       }
     },
     "ED_Spider_Stalker": {
@@ -482,7 +484,7 @@ Waves:
       "DifficultyRating": 70,
       "Rarity": 5.25,
       "MinSpawnCount": 1,
-      "MaxSpawnCount": 3,
+      "MaxSpawnCount": 1,
       "SpawnAmountModifier": 1,
       "CanBeUsedForConstantPressure": true,
       "CanBeUsedInEncounters": true,
