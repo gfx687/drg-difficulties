@@ -1,5 +1,5 @@
 {
-  "Name": "ND_TS_mining (v2)",
+  "Name": "ND_TS_mining (v3)",
   "Description": "True Solo difficulty based on pH-JPEG's ND. Adjusted for mining missions
 
 Enemy caps adjusted to not require More Enemy Attackers
@@ -29,6 +29,7 @@ Enemies:
 - goo / fire bombers - take 33% more damage
 - leech - speed 2.0 -> 1.6 to account for VEA speeding them up
 - stingtails - no more than 2 per spawn
+- arbalest - adjusted HP because of bad p1 scaling for dreads
 
 Waves:
 - no super waves
@@ -541,7 +542,7 @@ Waves:
       "CanBeUsedForConstantPressure": true,
       "SpawnAmountModifier": 2,
       "PawnStats": {
-        "PST_DamageResistance": 13.125
+        "PST_DamageResistance": 9
       }
     },
     "ED_Spider_ExploderTank_small": {
