@@ -1,6 +1,6 @@
 {
-  "Name": "ND_TS_mining (v3)",
-  "Description": "True Solo difficulty based on pH-JPEG's ND. Adjusted for mining missions
+  "Name": "ND_TS_refinery (v1)",
+  "Description": "True Solo difficulty based on pH-JPEG's ND. Adjusted for refinery missions
 
 Enemy caps adjusted to not require More Enemy Attackers
 
@@ -12,8 +12,13 @@ Recommended mods:
 - Only Bugs No Content
 - No special swarms or only grunt / mactera with swarmers / praets / dread removed
 
-Mining specific adjustments:
-- sentinels - don't spawn in encounters
+Refinery specific changes:
+- stationaries:
+  - no nukeballers
+  - leeches are 25% more expensive
+  - overall stationary pool size is ~33% lower
+- waves timer 110-150s -> 140-180s
+- swarm timer 150-190s -> 180-220s
 
 General:
 - 60 nitra resups, 60 starting
@@ -52,8 +57,8 @@ Waves:
     {
       "weight": 1,
       "range": {
-        "min": 725,
-        "max": 900
+        "min": 800,
+        "max": 800
       }
     }
   ],
@@ -61,8 +66,8 @@ Waves:
     {
       "weight": 1,
       "range": {
-        "min": 800,
-        "max": 950
+        "min": 540,
+        "max": 630
       }
     }
   ],
@@ -70,31 +75,31 @@ Waves:
     {
       "weight": 0.4,
       "range": {
-        "min": 120,
-        "max": 150
+        "min": 150,
+        "max": 160
       }
     },
     {
       "weight": 0.6,
       "range": {
-        "min": 110,
-        "max": 140
+        "min": 140,
+        "max": 180
       }
     }
   ],
   "EnemyNormalWaveInterval": [
     {
-      "weight": 0.6,
+      "weight": 0.4,
       "range": {
-        "min": 150,
-        "max": 180
+        "min": 195,
+        "max": 205
       }
     },
     {
-      "weight": 0.4,
+      "weight": 0.6,
       "range": {
-        "min": 170,
-        "max": 190
+        "min": 180,
+        "max": 220
       }
     }
   ],
@@ -178,7 +183,7 @@ Waves:
     "ED_CaveLeech": {
       "Base": "ED_CaveLeech",
       "TimeDilation": 1.6,
-      "DifficultyRating": 100
+      "DifficultyRating": 125
     },
     "ED_Spider_Tank_HeavySpawn": {
       "Base": "ED_Spider_Tank_HeavySpawn",
@@ -188,7 +193,7 @@ Waves:
       "MinSpawnCount": 1,
       "MaxSpawnCount": 30,
       "CanBeUsedForConstantPressure": true,
-      "CanBeUsedInEncounters": false,
+      "CanBeUsedInEncounters": true,
       "SpawnSpread": 5000
     },
     "ED_Bomber_Explosive": {
@@ -620,8 +625,7 @@ Waves:
   "StationaryEnemies": {
     "clear": false,
     "add": [
-      "ED_Sprout_Normal",
-      "ED_ShootingPlant_NukeSingle"
+      "ED_Sprout_Normal"
     ],
     "remove": []
   },
@@ -633,3 +637,5 @@ Waves:
     "NeutralDamageModifier": 0.1
   }
 }
+
+
