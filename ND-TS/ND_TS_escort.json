@@ -1,5 +1,5 @@
 {
-  "Name": "ND_TS_escort (v1)",
+  "Name": "ND_TS_escort (v2)",
   "Description": "True Solo difficulty based on pH-JPEG's ND. Adjusted for escort missions
 
 Enemy caps adjusted to not require More Enemy Attackers
@@ -14,6 +14,12 @@ Recommended mods:
 
 Escort specific adjustments:
 - sentinels - don't spawn in encounters
+- stingtails - do not spawn in encounters
+- bulks - removed (minibulks are still in the pool)
+- stationaries:
+  - no nukeballers
+  - overall amount is nerfed by ~50%
+- encounter waves are nerfed by ~33%
 
 General:
 - 60 nitra resups, 60 starting
@@ -21,13 +27,12 @@ General:
 - enemy cap 90 -> 60
 
 Enemies:
-- bulks - normal bulks take x3 damage
 - oppressors - take 200% of damage from melee attacks
 - shredders - removed
 - grabbers - speed 150% -> 120%
 - goo / fire bombers - take 33% more damage
 - leech - speed 2.0 -> 1.6 to account for VEA speeding them up
-- stingtails - no more than 2 per spawn
+- stingtails - no more than 2 per spawn and do not spawn in encounters
 - arbalest - adjusted HP because of bad p1 scaling for dreads
 
 Waves:
@@ -52,8 +57,8 @@ Waves:
     {
       "weight": 1,
       "range": {
-        "min": 725,
-        "max": 900
+        "min": 550,
+        "max": 550
       }
     }
   ],
@@ -61,8 +66,8 @@ Waves:
     {
       "weight": 1,
       "range": {
-        "min": 800,
-        "max": 950
+        "min": 450,
+        "max": 450
       }
     }
   ],
@@ -487,7 +492,7 @@ Waves:
       "MaxSpawnCount": 1,
       "SpawnAmountModifier": 1,
       "CanBeUsedForConstantPressure": true,
-      "CanBeUsedInEncounters": true,
+      "CanBeUsedInEncounters": false,
       "Scale": 1,
       "PawnStats": {
         "PST_DamageResistance": 1
@@ -586,7 +591,8 @@ Waves:
     "add": [],
     "remove": [
       "ED_Terminator",
-      "ED_InfectedMule"
+      "ED_InfectedMule",
+      "ED_Spider_ExploderTank"
     ]
   },
   "CommonEnemies": {
@@ -620,8 +626,7 @@ Waves:
   "StationaryEnemies": {
     "clear": false,
     "add": [
-      "ED_Sprout_Normal",
-      "ED_ShootingPlant_NukeSingle"
+      "ED_Sprout_Normal"
     ],
     "remove": []
   },
