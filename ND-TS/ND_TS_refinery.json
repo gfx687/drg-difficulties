@@ -1,5 +1,5 @@
 {
-  "Name": "ND_TS_refinery (v2)",
+  "Name": "ND_TS_refinery (v3)",
   "Description": "True Solo difficulty based on pH-JPEG's ND. Adjusted for refinery missions
 
 Enemy caps adjusted to not require More Enemy Attackers
@@ -13,6 +13,9 @@ Recommended mods:
 - No special swarms or only grunt / mactera with swarmers / praets / dread removed
 
 Refinery specific adjustments:
+- overall EnemyCountModifier is ~10% lower
+- shellbacks - do not spawn in encounters
+- acids - do not spawn in encounters
 - stationaries:
   - no nukeballers
   - leeches are 25% more expensive
@@ -53,7 +56,7 @@ Waves:
   "EnemyDamageResistance": 1.4,
   "SmallEnemyDamageResistance": 1.2,
   "EnemyDamageModifier": 3.8,
-  "EnemyCountModifier": 2.3,
+  "EnemyCountModifier": 2.1,
   "EncounterDifficulty": [
     {
       "weight": 1,
@@ -299,7 +302,7 @@ Waves:
       "SpawnAmountModifier": 1,
       "Rarity": 5.125,
       "CanBeUsedForConstantPressure": true,
-      "CanBeUsedInEncounters": true
+      "CanBeUsedInEncounters": false
     },
     "ED_Spider_RapidShooter": {
       "Base": "ED_Spider_RapidShooter",
@@ -390,7 +393,7 @@ Waves:
       "CanBeUsedForConstantPressure": true,
       "MaxSpawnCount": 3,
       "UseSpawnRarityModifiers": false,
-      "CanBeUsedInEncounters": true,
+      "CanBeUsedInEncounters": false,
       "Rarity": 5.25
     },
     "ED_Bomber": {
