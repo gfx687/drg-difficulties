@@ -1,5 +1,5 @@
 {
-  "Name": "ND_TS_escort (v2)",
+  "Name": "ND_TS_escort (v3)",
   "Description": "True Solo difficulty based on pH-JPEG's ND. Adjusted for escort missions
 
 Enemy caps adjusted to not require More Enemy Attackers
@@ -13,16 +13,17 @@ Recommended mods:
 - No special swarms or only grunt / mactera with swarmers / praets / dread removed
 
 Escort specific adjustments:
-- sentinels - don't spawn in encounters
+- sentinels - do not spawn in encounters
 - stingtails - do not spawn in encounters
 - bulks - removed (minibulks are still in the pool)
+- turbo menaces - removed
 - stationaries:
   - no nukeballers
   - overall amount is nerfed by ~50%
 - encounter waves are nerfed by ~33%
 
 General:
-- 60 nitra resups, 60 starting
+- 40 nitra resups, 40 starting
 - swarmer cap 90 -> 30
 - enemy cap 90 -> 60
 
@@ -43,8 +44,8 @@ Waves:
   "MaxActiveCritters": 40,
   "MaxActiveSwarmers": 30,
   "MaxActiveEnemies": 60,
-  "ResupplyCost": 60,
-  "StartingNitra": 60,
+  "ResupplyCost": 40,
+  "StartingNitra": 40,
   "ExtraLargeEnemyDamageResistance": 1,
   "ExtraLargeEnemyDamageResistanceB": 1,
   "ExtraLargeEnemyDamageResistanceC": 1,
@@ -606,7 +607,6 @@ Waves:
       "ED_Spider_Grunt_Guard_Elite",
       "ED_JellyBreeder_RockpoxPlague",
       "ED_Spider_Boss_TwinA_Weak",
-      "ED_Spider_RapidShooter_Turbo",
       "ED_Spider_ExploderTank_small"
     ],
     "remove": []
