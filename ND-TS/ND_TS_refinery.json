@@ -1,5 +1,5 @@
 {
-  "Name": "ND_TS_refinery (v3)",
+  "Name": "ND_TS_refinery (v4)",
   "Description": "True Solo difficulty based on pH-JPEG's ND. Adjusted for refinery missions
 
 Enemy caps adjusted to not require More Enemy Attackers
@@ -13,9 +13,9 @@ Recommended mods:
 - No special swarms or only grunt / mactera with swarmers / praets / dread removed
 
 Refinery specific adjustments:
-- overall EnemyCountModifier is ~10% lower
 - shellbacks - do not spawn in encounters
 - acids - do not spawn in encounters
+- spreaders - do not spawn in encounters
 - stationaries:
   - no nukeballers
   - leeches are 25% more expensive
@@ -42,7 +42,7 @@ Enemies:
 Waves:
 - no super waves
 - no instant / early waves
-- enemy diversity: 60% for 4-6 and 40% for 7-10
+- enemy diversity: 75% for 4-6 and 25% for 7-8
 ",
   "MaxActiveCritters": 40,
   "MaxActiveSwarmers": 30,
@@ -56,7 +56,7 @@ Waves:
   "EnemyDamageResistance": 1.4,
   "SmallEnemyDamageResistance": 1.2,
   "EnemyDamageModifier": 3.8,
-  "EnemyCountModifier": 2.1,
+  "EnemyCountModifier": 2.3,
   "EncounterDifficulty": [
     {
       "weight": 1,
@@ -118,17 +118,17 @@ Waves:
   ],
   "EnemyDiversity": [
     {
-      "weight": 0.6,
+      "weight": 0.75,
       "range": {
         "min": 4,
         "max": 6
       }
     },
     {
-      "weight": 0.4,
+      "weight": 0.25,
       "range": {
         "min": 7,
-        "max": 10
+        "max": 8
       }
     }
   ],
@@ -486,7 +486,7 @@ Waves:
       "MaxSpawnCount": 10,
       "SpawnAmountModifier": 1,
       "CanBeUsedForConstantPressure": true,
-      "CanBeUsedInEncounters": true
+      "CanBeUsedInEncounters": false
     },
     "ED_Spider_Stinger": {
       "Base": "ED_Spider_Stinger",
